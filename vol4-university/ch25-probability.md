@@ -283,4 +283,35 @@ print(f"  P(|X|<1) = {p:.4f} (正态理论 0.6827)")
 | 大数定律 | \\(\bar{X}_n \xrightarrow{P} \mu\\) | 频率稳定性的保证 |
 | 中心极限 | 和 \\(\xrightarrow{d}\\) 正态 | 正态无处不在的原因 |
 
+## 📋 本章公式全表
+
+本章全部核心公式汇总如下；详细推导见正文各节。
+
+| 公式 | 名称 | 适用条件 / 说明 |
+|---|---|---|
+| \\(P(A)=\frac{k}{n}\\) | 古典概型 | \\(n\\) 个等可能基本事件，\\(A\\) 含 \\(k\\) 个 |
+| \\(0\le P(A)\le 1\\)；\\(P(\Omega)=1\\)；互斥事件 \\(P\left(\bigcup A_i\right)=\sum P(A_i)\\) | 柯尔莫哥洛夫公理（1933） | 概率论的公理基础 |
+| \\(P(\bar{A})=1-P(A)\\) | 对立事件概率 | |
+| \\(P(A\cup B)=P(A)+P(B)-P(A\cap B)\\) | 加法公式 | |
+| \\(P(A\mid B)=\frac{P(A\cap B)}{P(B)}\\) | 条件概率 | |
+| \\(P(A\mid B)=\frac{P(B\mid A)\cdot P(A)}{P(B)}\\) | 贝叶斯定理 | 逆概率推理；警惕"基础概率谬误" |
+| \\(P(X=k)=p^k(1-p)^{1-k}\\)，\\(E=p\\)，\\(\text{Var}=p(1-p)\\) | 两点分布 | 抛一次硬币 |
+| \\(P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}\\)，\\(E=np\\)，\\(\text{Var}=np(1-p)\\) | 二项分布 \\(B(n,p)\\) | 抛 \\(n\\) 次硬币 |
+| \\(P(X=k)=\frac{\lambda^k}{k!}e^{-\lambda}\\)，\\(E=\lambda\\)，\\(\text{Var}=\lambda\\) | 泊松分布 | 稀有事件计数 |
+| \\(P(X=k)=(1-p)^{k-1}p\\)，\\(E=1/p\\)，\\(\text{Var}=(1-p)/p^2\\) | 几何分布 | 首次成功试验数 |
+| \\(f(x)=\frac{1}{b-a}\\)，\\(E=\frac{a+b}{2}\\) | 均匀分布 \\(U[a,b]\\) | |
+| \\(f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\\) | 正态分布 \\(N(\mu,\sigma^2)\\) | 最重要的分布 |
+| \\(f(x)=\lambda e^{-\lambda x}\\)（\\(x>0\\)） | 指数分布 | 无记忆性 |
+| \\(P(\lvert X\rvert<1)=0.6827\\)；\\(P(\lvert X\rvert<2)=0.9545\\)；\\(P(\lvert X\rvert<3)=0.9973\\) | 68-95-99.7 法则 | \\(X\\) 为标准正态 |
+| 离散：\\(E[X]=\sum x_iP(X=x_i)\\)；连续：\\(E[X]=\int_{-\infty}^{\infty}xf(x)\,dx\\) | 期望定义 | |
+| \\(E[aX+b]=aE[X]+b\\)；\\(E[X+Y]=E[X]+E[Y]\\)；独立时 \\(E[XY]=E[X]E[Y]\\) | 期望性质 | \\(E[X+Y]\\) 无需独立 |
+| \\(\text{Var}(X)=E[(X-E[X])^2]=E[X^2]-(E[X])^2\\)；\\(\sigma=\sqrt{\text{Var}(X)}\\) | 方差定义 | |
+| \\(\text{Var}(aX+b)=a^2\text{Var}(X)\\)；独立时 \\(\text{Var}(X+Y)=\text{Var}(X)+\text{Var}(Y)\\) | 方差性质 | |
+| \\(\text{Cov}(X,Y)=E[XY]-E[X]E[Y]\\)；\\(\rho=\frac{\text{Cov}(X,Y)}{\sigma_X\sigma_Y}\in[-1,1]\\) | 协方差与相关系数 | 不相关 \\(\nRightarrow\\) 独立；独立 \\(\Rightarrow\\) 不相关 |
+| \\(P(\lvert X-\mu\rvert>\varepsilon)\le\frac{\sigma^2}{\varepsilon^2}\\) | 切比雪夫不等式 | 大数定律证明的工具 |
+| \\(\bar{X}_n=\frac{X_1+\cdots+X_n}{n}\xrightarrow{P}\mu\\) | 弱大数定律 | 样本均值依概率收敛到期望 |
+| \\(\frac{\bar{X}_n-\mu}{\sigma/\sqrt{n}}\xrightarrow{d}N(0,1)\\) | 中心极限定理 | 大量独立随机变量之和近似正态 |
+| \\(p(n)\sim\frac{1}{4n\sqrt{3}}\exp\left(\pi\sqrt{\frac{2n}{3}}\right)\\) | 哈代-拉马努金渐近公式（拉马努金角） | 1918 |
+| \\(\pi\approx 4\cdot\frac{N_{\text{内}}}{N}\\) | 蒙特卡洛估算 π | 随机点落在单位圆内的比例；25.1 代码 |
+
 **第四卷完**。下一卷（第五卷）：实分析、抽象代数、拓扑——数学系的硬核核心。
