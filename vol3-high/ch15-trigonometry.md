@@ -225,3 +225,36 @@ print(f"c={c:.3f}, 面积={S:.3f}")
 
 **下一章预告**：数列与数学归纳法——从高斯求和到严格的证明艺术，
 我们将正式掌握"多米诺骨牌"式的推理，证明 \\(1^2+2^2+\cdots+n^2\\) 公式。
+
+
+## 📋 本章公式全表
+
+本章全部核心公式汇总如下；详细推导见正文各节。
+
+| 公式 | 名称 | 适用条件 / 说明 |
+|---|---|---|
+| \\(\text{弧度} = \text{角度} \times \frac{\pi}{180}\\) | 角度化弧度 | \\(360° = 2\pi\\) 弧度 |
+| \\(\text{角度} = \text{弧度} \times \frac{180}{\pi}\\) | 弧度化角度 | 同上 |
+| \\(l = r\theta\\) | 扇形弧长 | \\(\theta\\) 为弧度；\\(r\\) 为半径 |
+| \\(S = \frac{1}{2}r^2\theta\\) | 扇形面积 | \\(\theta\\) 为弧度；\\(r\\) 为半径 |
+| \\(\cos\theta = x_P\\)，\\(\sin\theta = y_P\\)，\\(\tan\theta = \frac{\sin\theta}{\cos\theta}\\) | 单位圆定义 | \\(P\\) 为角 \\(\theta\\) 的终边与单位圆的交点 |
+| \\(\sin^2\theta + \cos^2\theta = 1\\) | 同角基本关系（平方和） | 勾股定理在单位圆上的体现 |
+| \\(1 + \tan^2\theta = \sec^2\theta\\) | 同角关系 | 平方和两边同除 \\(\cos^2\theta\\) 得到 |
+| \\(1 + \cot^2\theta = \csc^2\theta\\) | 同角关系 | 平方和两边同除 \\(\sin^2\theta\\) 得到 |
+| \\(\sin\left(\frac{\pi}{2} - \theta\right) = \cos\theta\\)，\\(\cos\left(\frac{\pi}{2} - \theta\right) = \sin\theta\\) | 诱导公式（余角） | 奇变偶不变，符号看象限 |
+| \\(\sin(\pi - \theta) = \sin\theta\\)，\\(\cos(\pi - \theta) = -\cos\theta\\) | 诱导公式 | 奇变偶不变，符号看象限 |
+| \\(\sin(\pi + \theta) = -\sin\theta\\)，\\(\cos(\pi + \theta) = -\cos\theta\\) | 诱导公式 | 奇变偶不变，符号看象限 |
+| \\(\sin(-\theta) = -\sin\theta\\)，\\(\cos(-\theta) = \cos\theta\\) | 奇偶性 | \\(\sin\\) 为奇函数，\\(\cos\\) 为偶函数 |
+| \\(\sin(\alpha + \beta) = \sin\alpha\cos\beta + \cos\alpha\sin\beta\\) | 两角和正弦 | — |
+| \\(\cos(\alpha + \beta) = \cos\alpha\cos\beta - \sin\alpha\sin\beta\\) | 两角和余弦 | — |
+| \\(\tan(\alpha + \beta) = \frac{\tan\alpha + \tan\beta}{1 - \tan\alpha\tan\beta}\\) | 两角和正切 | \\(1 - \tan\alpha\tan\beta \neq 0\\) |
+| \\(\cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta\\) | 两角差余弦 | 向量法推导；其余差角公式由此导出 |
+| \\(\sin 2\theta = 2\sin\theta\cos\theta\\) | 倍角公式（正弦） | — |
+| \\(\cos 2\theta = \cos^2\theta - \sin^2\theta = 2\cos^2\theta - 1 = 1 - 2\sin^2\theta\\) | 倍角公式（余弦） | 三种等价形式 |
+| \\(\tan 2\theta = \frac{2\tan\theta}{1 - \tan^2\theta}\\) | 倍角公式（正切） | \\(1 - \tan^2\theta \neq 0\\) |
+| \\(\sin\alpha + \sin\beta = 2\sin\frac{\alpha+\beta}{2}\cos\frac{\alpha-\beta}{2}\\) | 和差化积（正弦和） | 本章只列了其中两条和差化积公式 |
+| \\(\cos\alpha + \cos\beta = 2\cos\frac{\alpha+\beta}{2}\cos\frac{\alpha-\beta}{2}\\) | 和差化积（余弦和） | 同上 |
+| \\(\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R\\) | 正弦定理 | \\(R\\) 为三角形外接圆半径 |
+| \\(c^2 = a^2 + b^2 - 2ab\cos C\\) | 余弦定理 | \\(C = 90°\\) 时退化为勾股定理 |
+| \\(S = \frac{1}{2}ab\sin C = \frac{abc}{4R} = 2R^2\sin A\sin B\sin C\\) | 三角形面积公式 | 三种等价形式 |
+| \\(\frac{\sin x}{x} = \prod_{n=1}^{\infty} \left(1 - \frac{x^2}{n^2\pi^2}\right)\\) | 正弦无穷乘积（拉马努金角） | 欧拉的经典结果；可推出 \\(\zeta(2) = \pi^2/6\\) |
