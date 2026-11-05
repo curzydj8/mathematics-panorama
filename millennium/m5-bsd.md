@@ -152,7 +152,7 @@ euler_system_idea()
 def bhargava_statistics():
     """
     对高度 < X 的所有椭圆曲线：
-    - 平均秩 → < 1.17（Bhargava-Shankar 上界）
+    - 平均秩 → < 1（Bhargava-Shankar, 2015；实际已证 ≤ 0.885）
     - 实际上猜测平均秩 = 0.5
 
     这意味着：
@@ -274,5 +274,22 @@ print("BSD 预言：L(E,1) = 0（一阶零点）")
 | 1 | ✅ 已证 | Gross-Zagier + Kolyvagin |
 | ≥2 | ❌ 开放 | 需要新的 Euler 系 |
 | 统计 | 平均秩 < 1 | Bhargava 几何数论 |
+
+## 📋 本章公式全表
+
+本章全部核心公式汇总如下；详细推导见正文各节。
+
+| 公式 | 名称 | 适用条件 / 说明 |
+|---|---|---|
+| \\(y^2 = x^3 + ax + b\\)，\\(4a^3 + 27b^2 \\neq 0\\) | 椭圆曲线 | 光滑射影曲线 |
+| \\(E(\\mathbb{Q}) \\cong E(\\mathbb{Q})_{\\text{tors}} \\oplus \\mathbb{Z}^r\\) | Mordell 定理（1922） | \\(r\\) 为秩；有限生成阿贝尔群 |
+| \\(L(E, s) = \\prod_{p} \\frac{1}{1 - a_p p^{-s} + p^{1-2s}}\\) | 椭圆曲线 L 函数 | \\(a_p = p + 1 - \\#E(\\mathbb{F}_p)\\) |
+| \\(\\mathrm{rank}\\, E(\\mathbb{Q}) = \\mathrm{ord}_{s=1} L(E, s)\\) | BSD 猜想（1965） | L 函数在 \\(s=1\\) 处的零点阶数 = 秩 |
+| \\(\\mathrm{ord}_{s=1} L_p(E, s) = r + \\text{（例外零点修正）}\\) | p 进 BSD（Mazur–Tate–Teitelbaum） | p 进 L 函数 |
+| \\(L'(E, 1) = \\frac{\\langle P_K, P_K \\rangle}{\\text{（显式常数）}}\\) | Gross–Zagier 公式（1986） | \\(P_K\\) 为 Heegner 点；\\(\\langle\\cdot,\\cdot\\rangle\\) 为 Néron–Tate 高度 |
+| \\(n\\) 是同余数 \\(\\iff y^2 = x^3 - n^2x\\) 的秩 \\(> 0\\) | 同余数定理 | BSD 给出判定：\\(n\\) 是同余数 \\(\\iff L(E_n, 1) = 0\\) |
+| 椭圆曲线的平均秩 \\(< 1\\) | Bhargava–Shankar（2015） | 统计结果；超 50% 秩为 0，约 50% 秩为 1 |
+| \\(2(0,0) = \\mathcal{O}\\) | 2 阶点 | 如 \\(y^2 = x^3 - x\\) 上 \\((0,0)\\)；该曲线秩为 0 |
+
 
 **下一章**：M6 哥德巴赫猜想——最诱人的素数问题，陈景润的 1+2。
