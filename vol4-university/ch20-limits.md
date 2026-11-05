@@ -263,3 +263,21 @@ print(f"math库：{2**(1/3):.10f}")
 | 介值定理 | 连续函数取遍中间值 | 存在性证明 + 二分算法 |
 
 **下一章**：微分学——从"平均变化率"到"瞬时变化率"，牛顿与莱布尼茨的伟大发明。
+
+## 📋 本章公式全表
+
+本章全部核心公式汇总如下；详细推导见正文各节。
+
+| 公式 | 名称 | 适用条件 / 说明 |
+|---|---|---|
+| \\(\forall \varepsilon > 0, \exists \delta > 0: 0 < \lvert x-a\rvert < \delta \Rightarrow \lvert f(x)-L\rvert < \varepsilon\\) | 函数极限的 ε-δ 定义 | \\(\lim_{x\to a} f(x) = L\\) 的严格定义 |
+| \\(\lim_{n\to\infty} a_n = L \iff \forall\varepsilon>0, \exists N, \forall n>N: \lvert a_n-L\rvert<\varepsilon\\) | 数列极限的 ε-N 定义 | |
+| \\(\lim(f\pm g) = A\pm B\\)；\\(\lim(f\cdot g) = AB\\)；\\(\lim(f/g) = A/B\\) | 极限四则运算 | \\(\lim f = A\\)，\\(\lim g = B\\) 存在；除法要求 \\(B\neq 0\\) |
+| \\(\lim_{x\to 0}\frac{\sin x}{x} = 1\\) | 第一重要极限 | 夹逼定理证明 |
+| \\(\lim_{x\to\infty}\left(1+\frac{1}{x}\right)^x = e\\) | 第二重要极限 | \\(e\approx 2.71828\\)；连续复利的极限 |
+| \\(g(x)\le f(x)\le h(x)\\) 且 \\(\lim g = \lim h = L\\)，则 \\(\lim f = L\\) | 夹逼定理 | 两边夹，中间必收敛 |
+| \\(\sum_{n=0}^{\infty} r^n = \frac{1}{1-r}\\) | 无穷等比求和 | \\(\lvert r\rvert<1\\)；芝诺悖论的数学回答 |
+| \\(\lim_{x\to a} f(x) = f(a)\\) | 连续性定义 | 三条件：有定义、极限存在、两者相等 |
+| \\(f\\) 在 \\([a,b]\\) 连续，\\(f(a)<d<f(b)\\)，则 \\(\exists c\in(a,b)\\) 使 \\(f(c)=d\\) | 介值定理 | 连续函数取遍中间值；可用于证根的存在性 |
+| \\(\lim_{n\to\infty}\left[\frac{1}{n+1}+\frac{1}{n+2}+\cdots+\frac{1}{2n}\right] = \ln 2\\) | 拉马努金角：调和和式的极限 | 黎曼和 \\(\to \int_0^1\frac{dx}{1+x}\\) |
+| \\(\lim_{x\to 0}\frac{1-\cos x}{x^2} = \frac{1}{2}\\) | 常用极限（题 20.2） | 由 \\(\frac{\sin t}{t}\to 1\\) 推出 |
