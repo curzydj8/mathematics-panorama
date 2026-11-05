@@ -285,4 +285,23 @@ burgers_demo()
 | 凸积分 | 弱解不唯一 | Buckmaster-Vicol (2019) |
 | 数值搜索 | 计算机找爆破 | Chen-Hou (2023) 的数值证据 |
 
+## 📋 本章公式全表
+
+本章全部核心公式汇总如下；详细推导见正文各节。
+
+| 公式 | 名称 | 适用条件 / 说明 |
+|---|---|---|
+| \\(\\frac{\\partial \\mathbf{u}}{\\partial t} + (\\mathbf{u} \\cdot \\nabla)\\mathbf{u} = -\\nabla p + \\nu \\Delta \\mathbf{u} + \\mathbf{f}\\) | 纳维-斯托克斯方程 | 不可压缩牛顿流体；\\(\\nu > 0\\) 为粘性系数 |
+| \\(\\nabla \\cdot \\mathbf{u} = 0\\) | 不可压缩条件 | 速度场无散 |
+| \\(\\mathbf{u}_\\lambda(x,t) = \\lambda \\mathbf{u}(\\lambda x, \\lambda^2 t)\\) | 尺度不变性 | 适当缩放压强与外力后仍为解 |
+| \\(\\lVert\\mathbf{u}_\\lambda\\rVert_{L^p} = \\lambda^{1-3/p} \\lVert\\mathbf{u}\\rVert_{L^p}\\) | \\(L^p\\) 范数缩放 | \\(p = 3\\) 时指数为 0，即临界 |
+| \\(L^3\\)、\\(\\dot{H}^{1/2}\\) 为临界空间 | 临界空间 | 次临界已知正则；临界是战场 |
+| \\(\\frac{1}{2}\\frac{d}{dt}\\lVert\\mathbf{u}\\rVert_{L^2}^2 + \\nu\\lVert\\nabla\\mathbf{u}\\rVert_{L^2}^2 = 0\\) | 能量恒等式 | 无外力时；只控制 \\(L^2\\)，不够强 |
+| \\(\\boldsymbol{\\omega} = \\nabla \\times \\mathbf{u}\\) | 涡量定义 | — |
+| \\(\\frac{\\partial \\boldsymbol{\\omega}}{\\partial t} + (\\mathbf{u}\\cdot\\nabla)\\boldsymbol{\\omega} = (\\boldsymbol{\\omega}\\cdot\\nabla)\\mathbf{u} + \\nu\\Delta\\boldsymbol{\\omega}\\) | 3D 涡量方程 | \\((\\boldsymbol{\\omega}\\cdot\\nabla)\\mathbf{u}\\) 为涡拉伸，3D 特有 |
+| \\(\\omega_t + (\\mathbf{u}\\cdot\\nabla)\\omega = \\nu\\Delta\\omega\\) | 2D 涡量方程 | 标量；无拉伸项，\\(\\lVert\\omega(t)\\rVert_\\infty\\) 不增 |
+| 奇异集的 1 维 Hausdorff 测度为零 | 部分正则性（Caffarelli–Kohn–Nirenberg 1982） | — |
+| 爆破模型：涡量 \\(\\sim 1/(T-t)\\) | 有限时间爆破 | 玩具模型；\\(t \\to T\\) 时趋于无穷 |
+
+
 **下一章**：M4 杨-米尔斯质量间隙——量子场论的数学基础。
