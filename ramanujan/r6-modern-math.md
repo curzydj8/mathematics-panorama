@@ -185,6 +185,24 @@ Circle method 把生成函数在单位圆附近展开，主导贡献来自 \\( q
 | Rogers–Ramanujan | 1913 年恒等式 | Baxter 统计模型；共形场论 |
 | 1729 | 病房闲聊 | Taxicab(6) 仍未找到 |
 
-**拉马努金卷完结。** 全书结构至此完整：46 章 + 附录 4 篇。
+## 📋 本章公式全表
+
+本章全部核心公式汇总如下；详细推导见正文各节。
+
+| 公式 | 名称 | 适用条件 / 说明 |
+|---|---|---|
+| \\(p(5n+4) \\equiv 0 \\pmod 5, \\quad p(7n+5) \\equiv 0 \\pmod 7, \\quad p(11n+6) \\equiv 0 \\pmod{11}\\) | 拉马努金的三个分拆同余式（1919） | Ono 2000 推广到每个素数 |
+| \\(p(An+B) \\equiv 0 \\pmod m\\) | Ono 定理（2000） | 对每个素数 \\(m \\ge 5\\)，存在无穷多个这样的同余式 |
+| \\(p(n) = \\frac{1}{\\pi\\sqrt{2}}\\sum_{k=1}^{\\infty} A_k(n)\\sqrt{k}\\,\\frac{d}{dn}\\left(\\frac{\\sinh\\left(\\frac{\\pi}{k}\\sqrt{\\frac{2}{3}\\left(n-\\frac{1}{24}\\right)}\\right)}{\\sqrt{n-\\frac{1}{24}}}\\right)\\) | Rademacher 分拆精确公式（1937） | 无穷级数收敛到精确的整数值；\\(A_k(n)\\) 为 Kloosterman 和 |
+| \\(p(n) \\sim \\frac{e^{\\pi\\sqrt{2n/3}}}{4n\\sqrt{3}}\\) | Hardy–Ramanujan 分拆渐近公式 | 主项；详见 R1 |
+| \\(\\sum_{n=0}^{\\infty}\\frac{q^{n^2}}{(q;q)_n} = \\prod_{n=1}^{\\infty}\\frac{1}{(1-q^{5n-1})(1-q^{5n-4})}\\) | Rogers–Ramanujan 恒等式（一） | Baxter 硬六边形模型；共形场论 |
+| \\(\\tau(n) \\ne 0\\) 对一切 \\(n\\) | Lehmer 猜想（未解决） | R5 已讲；仍未解决 |
+| \\(1729 = 1^3 + 12^3 = 9^3 + 10^3\\) | Taxicab(2) | 最小的两种立方和表示；拉马努金 1918 |
+| \\(87539319 = 167^3 + 436^3 = 228^3 + 423^3\\) | Taxicab(3) | 1957 年找到 |
+| \\(\\frac{\\tau(p)}{2p^{11/2}}\\) 的分布服从半圆律 | Sato–Tate 定理（τ 的统计版） | Barnet-Lamb、Geraghty、Harris、Taylor 2011 年证明 |
+
+---
+
+**拉马努金卷完结。** 全书结构至此完整：48 章 + 附录 4 篇。
 
 **下一步**：公式全表扩写——每章末增补「本章公式全表」，把《数学全景图》做成真正的数学公式全站。
