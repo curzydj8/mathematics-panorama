@@ -82,10 +82,10 @@ for year, event in events:
 
 \\[ \\phi_0(q) = \\sum_{n=0}^{\\infty} q^{n^2}(-q; q^2)_n, \\quad \\phi_1(q) = \\sum_{n=0}^{\\infty} q^{(n+1)^2}(-q; q^2)_n \\]
 
-还有 \\(\\psi_0, \\psi_1, \\chi_0, \\chi_1\\)。
+还有 \\(\\psi_0, \\psi_1, \\chi_0, \\chi_1\\)，以及 \\(F_0, F_1\\)。
 
 - **来源**：Lost Notebook
-- **mock theta 猜想**（拉马努金临终猜想，1987 年由 Hickerson 证明）：
+- **mock theta 猜想**（拉马努金临终猜想，1988 年由 Hickerson 证明）：
   这 10 个函数之间有 6 组**线性关系**，系数是 theta 函数
 
 ```python
@@ -234,6 +234,21 @@ Lawrence-Zagier（1999）发现 mock theta 函数与**3-流形的 Witten-Resheti
 | Zwegers 突破 | 调和 Maass 形式的全纯部分 | 2002，80 年后 |
 | 黑洞熵 | Mock 系数 = 量子黑洞熵 | 弦理论应用 |
 | 启示 | 直觉可以超越时代 | 实验数学的价值 |
+
+## 📋 本章公式全表
+
+本章全部核心公式汇总如下；详细推导见正文各节。
+
+| 公式 | 名称 | 适用条件 / 说明 |
+|---|---|---|
+| \\(\\vartheta(z; \\tau) = \\sum_{n=-\\infty}^{\\infty} e^{\\pi i n^2 \\tau + 2\\pi i n z}\\) | Jacobi theta 函数 | 满足模变换；模形式的例子 |
+| \\(f(q) = \\sum_{n=0}^{\\infty} \\frac{q^{n^2}}{(-q; q)_n^2} = 1 + q - 2q^2 + 3q^3 - 3q^4 + \\cdots\\) | 第三阶 mock theta 函数 f(q) | \\(\\lvert q \\rvert < 1\\) 内全纯；1920 年致哈代信 |
+| \\(f_0(q) = \\sum_{n=0}^{\\infty} \\frac{q^{n^2}}{(-q; q)_n}, \\quad f_1(q) = \\sum_{n=0}^{\\infty} \\frac{q^{n^2+n}}{(-q; q)_n}\\) | 第五阶 mock theta 函数 f₀、f₁ | Lost Notebook；另有 φ₀、φ₁、ψ₀、ψ₁、χ₀、χ₁ 等 |
+| \\(\\phi_0(q) = \\sum_{n=0}^{\\infty} q^{n^2}(-q; q^2)_n, \\quad \\phi_1(q) = \\sum_{n=0}^{\\infty} q^{(n+1)^2}(-q; q^2)_n\\) | 第五阶 mock theta 函数 φ₀、φ₁ | 同上 |
+| \\(\\widehat{M}(\\tau) = M(q) + M^-(\\tau), \\quad q = e^{2\\pi i \\tau}\\) | Zwegers 补全（mock theta 是调和 Maass 形式的全纯部分） | \\(M^-(\\tau)\\) 为非全纯修正项；Zwegers 2002 |
+| \\(S_{BH} = \\log d(Q)\\) | 黑洞熵（示意） | \\(d(Q)\\) 是 mock modular form 的系数；Dabholkar–Murthy–Zagier |
+
+---
 
 **下一章预告**：R4 —— 1/π 公式与模方程，
 拉马努金最快的 π 算法，Python 实测每项 8 位精度。
