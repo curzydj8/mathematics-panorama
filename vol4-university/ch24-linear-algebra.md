@@ -224,7 +224,7 @@ print(f"\n斐波那契 F_21 = {Fn[0,1]} (矩阵快速幂 O(log n)!)")
 ## ✅ 习题解答
 
 ### 题 24.1
-**线性相关**。因为第三个向量 = 第一个 + 第二个：
+**线性相关**。因为第三个向量 = 第一个 + 2×（第二个 − 第一个）：
 \\((7,8,9) = (1,2,3) + 2\times(3,3,3)\\)……更直接地：
 行列式 \\(\det = 1(45-48) - 2(36-42) + 3(32-35) = -3 + 12 - 9 = 0\\)，
 故线性相关。
@@ -272,3 +272,23 @@ print("PD^3P⁻¹:", (P @ np.diag(lams**3) @ np.linalg.inv(P))[0])
 | 特征值 | \\(\det(A-\lambda I) = 0\\) | 对角化、稳定性、PCA |
 
 **下一章**：概率论——从赌博到大数定律，随机性中的确定性。
+
+## 📋 本章公式全表
+
+本章全部核心公式汇总如下；详细推导见正文各节。
+
+| 公式 | 名称 | 适用条件 / 说明 |
+|---|---|---|
+| \\(c_1\mathbf{v}_1+\cdots+c_n\mathbf{v}_n=\mathbf{0}\Rightarrow c_1=\cdots=c_n=0\\) | 线性无关定义 | |
+| \\(\dim\mathbb{R}^n=n\\)；标准基 \\(\mathbf{e}_1=(1,0,0)\\)，\\(\mathbf{e}_2=(0,1,0)\\)，\\(\mathbf{e}_3=(0,0,1)\\) | 基与维数 | 基 = 线性无关 + 张成全空间 |
+| \\((AB)_{ij}=\sum_k A_{ik}B_{kj}\\) | 矩阵乘法 | 一般 \\(AB\neq BA\\)；矩阵 = 线性变换 |
+| \\(\begin{pmatrix}\cos\theta&-\sin\theta\\\\\sin\theta&\cos\theta\end{pmatrix}\\) | 旋转矩阵 | 旋转 \\(\theta\\) |
+| \\(\begin{pmatrix}a&b\\\\c&d\end{pmatrix}^{-1}=\frac{1}{ad-bc}\begin{pmatrix}d&-b\\\\-c&a\end{pmatrix}\\) | 2×2 逆矩阵 | \\(ad-bc\neq 0\\) |
+| \\(A\mathbf{x}=\mathbf{b}\Rightarrow\mathbf{x}=A^{-1}\mathbf{b}\\) | 解线性方程组 | \\(A\\) 可逆时 |
+| \\(\det\begin{pmatrix}a&b\\\\c&d\end{pmatrix}=ad-bc\\) | 2×2 行列式 | \\(\lvert\det A\rvert\\) = 面积缩放因子；\\(\det A<0\\) 表示翻转定向 |
+| \\(\det(AB)=\det A\det B\\)；\\(\det(A^T)=\det A\\)；\\(\det(A^{-1})=1/\det A\\)；\\(\det A=0\iff A\\) 不可逆 | 行列式性质 | |
+| \\(x_i=\frac{\det(A_i)}{\det(A)}\\) | 克拉默法则 | \\(A_i\\) 为 \\(A\\) 第 \\(i\\) 列换成 \\(\mathbf{b}\\) |
+| \\(\det(V)=\prod_{1\le i<j\le n}(x_j-x_i)\\)，\\(V_{ij}=x_j^{i-1}\\) | 范德蒙行列式（拉马努金角） | \\(n=3\\) 特例见正文 |
+| \\(A\mathbf{v}=\lambda\mathbf{v}\\)（\\(\mathbf{v}\neq\mathbf{0}\\)） | 特征值与特征向量定义 | |
+| \\(\det(A-\lambda I)=0\\) | 特征方程 | |
+| \\(A=PDP^{-1}\\)，则 \\(A^k=PD^kP^{-1}\\) | 对角化与矩阵幂 | \\(A\\) 有 \\(n\\) 个线性无关特征向量时 |
