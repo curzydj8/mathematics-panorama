@@ -51,7 +51,7 @@ print("但数学需要证明，不是验证")
 
 ### 素数定理
 
-\\[ \\pi(x) = \\#\\{p \\leq x : p \\text{ 素数}\\} \\sim \\frac{x}{\\log x} = \\mathrm{Li}(x) \\]
+\\[ \\pi(x) = \\#\\{p \\leq x : p \\text{ 素数}\\} \\sim \\mathrm{Li}(x) \\sim \\frac{x}{\\log x} \\]
 
 ### 黎曼猜想 ⟺ 最优误差项
 
@@ -197,9 +197,9 @@ gue_evidence()
 
 **定理**：黎曼猜想 ⟺ \\(\\Lambda \\leq 0\\)。
 
-**已知**：\\(\\Lambda \\geq 0\\)（Newman, 1976；实际 \\(\\Lambda \\geq -1.1 \\times 10^{-11}\\)，Polymath 2018）。
+**已知**：\\(0 \\leq \\Lambda < 0.2\\)（Rodgers–Tao 证明 \\(\\Lambda \\geq 0\\)；Polymath 证明 \\(\\Lambda \\leq 0.2\\)；Newman 1976 年猜想 \\(\\Lambda \\geq 0\\)）。
 
-**所以**：只需证明 \\(\\Lambda \\leq 0\\)，即把下界从 \\(-10^{-11}\\) 推到 \\(0\\)！
+**所以**：只需证明 \\(\\Lambda \\leq 0\\)，即 \\(\\Lambda = 0\\)！
 
 **进展**：
 - Rodgers-Tao (2018)：\\(\\Lambda \\geq 0\\)
@@ -325,6 +325,25 @@ for t in ["14.134725141734693", "21.022039638771555"]:
 | De Bruijn-Newman | \\(\\Lambda \\leq 0\\) | 已到 \\(-10^{-11}\\)，差一小步 |
 | 函数域类比 | 模仿 Deligne | Spec Z 无几何 |
 | Li 准则 | \\(\\lambda_n > 0\\) | 不等式，仍开放 |
+
+## 📋 本章公式全表
+
+本章全部核心公式汇总如下；详细推导见正文各节。
+
+| 公式 | 名称 | 适用条件 / 说明 |
+|---|---|---|
+| \\(\\zeta(s) = \\sum_{n=1}^{\\infty} \\frac{1}{n^s}\\)，\\(\\mathrm{Re}(s) > 1\\) | 黎曼 ζ 函数 | 解析延拓到 \\(\\mathbb{C} \\setminus \\{1\\}\\)；\\(s=1\\) 为单极点 |
+| \\(\\zeta(\\rho) = 0, \\; 0 < \\mathrm{Re}(\\rho) < 1 \\implies \\mathrm{Re}(\\rho) = \\frac{1}{2}\\) | 黎曼猜想（1859） | 所有非平凡零点都在临界线上 |
+| \\(\\pi(x) \\sim \\mathrm{Li}(x) \\sim \\frac{x}{\\log x}\\) | 素数定理 | \\(\\pi(x) = \\#\\{p \\leq x\\}\\)；渐近等价 |
+| \\(\\pi(x) = \\mathrm{Li}(x) + O(\\sqrt{x} \\log x)\\) | von Koch 定理（1901） | 黎曼猜想成立 \\(\\iff\\) 最优误差项 |
+| \\(\\psi(x) = x - \\sum_{\\rho} \\frac{x^\\rho}{\\rho} - \\log(2\\pi) - \\frac{1}{2}\\log(1-x^{-2})\\) | von Mangoldt 显式公式 | 求和遍历所有非平凡零点 |
+| 至少 41% 的零点在临界线上 | Bui–Conrey–Young（2011） | Levinson 34%（1974）、Conrey 40%（1989） |
+| \\(\\mathrm{Re}(s) > 1 - \\frac{c}{\\log\\lvert t\\rvert}\\) 内无零点 | Vinogradov–Korobov 零点自由区域 | — |
+| 黎曼猜想 \\(\\iff \\Lambda \\leq 0\\) | De Bruijn–Newman 常数 | 已知 \\(0 \\leq \\Lambda < 0.2\\)（Rodgers–Tao，Polymath 2019） |
+| \\(\\lambda_n = \\sum_{\\rho} \\left[1 - \\left(1 - \\frac{1}{\\rho}\\right)^n\\right]\\)；黎曼猜想 \\(\\iff \\lambda_n > 0\\)（一切 \\(n \\geq 1\\)） | Li 准则（1997） | 已验证到 \\(n = 10^5\\) |
+| 有限域上代数簇的 ζ 函数零点都在临界线上 | Weil 猜想（Deligne 1974 证明） | 函数域类比；数域情形开放 |
+| 前 5 个零点虚部：14.1347、21.0220、25.0109、30.4249、32.9351 | ζ 零点数值 | 实部均为 1/2（已用 mpmath 复核） |
+
 
 **千禧难题卷完结**。7 座大山，21+ 条攀登路线——
 每一座都值得用一生去攀登。
