@@ -273,3 +273,35 @@ print(f"误差: {abs(approx - math.pi):.2e}")
 | mock theta | "差一点"的模形式 | 黑洞熵、弦理论 |
 
 **下一章**：线性代数——从解方程组到向量空间，数学中最有用的工具箱。
+
+## 📋 本章公式全表
+
+本章全部核心公式汇总如下；详细推导见正文各节。
+
+| 公式 | 名称 | 适用条件 / 说明 |
+|---|---|---|
+| \\(S_N = a_1+a_2+\cdots+a_N\\)，\\(\lim_{N\to\infty} S_N = S\\) 存在则收敛 | 部分和与收敛定义 | 否则发散 |
+| \\(\sum_{n=0}^{\infty} r^n = \frac{1}{1-r}\\) | 几何级数 | \\(\lvert r\rvert<1\\)；最重要的级数 |
+| \\(\sum_{n=1}^{\infty}\frac{1}{n^p}\\) 收敛 \\(\iff p>1\\)；调和级数 \\(p=1\\) 发散 | p-级数 | |
+| \\(0\le a_n\le b_n\\)，\\(\sum b_n\\) 收敛 \\(\Rightarrow\sum a_n\\) 收敛 | 比较判别法 | 通用 |
+| \\(\lim\frac{a_{n+1}}{a_n} = L\\)：\\(L<1\\) 收敛，\\(L>1\\) 发散 | 比值判别法 | 含阶乘/指数时适用 |
+| \\(\lim\sqrt[n]{\lvert a_n\rvert} = L\\)：\\(L<1\\) 收敛 | 根值判别法 | 含 \\(n\\) 次幂时适用 |
+| \\(a_n\downarrow 0\\) 则 \\(\sum(-1)^n a_n\\) 收敛 | 交错级数判别法（莱布尼茨） | |
+| \\(\sum f(n)\\) 与 \\(\int f\\) 同敛散 | 积分判别法 | \\(f\\) 单调递减 |
+| \\(R = \frac{1}{\limsup\sqrt[n]{\lvert c_n\rvert}}\\) | 幂级数收敛半径 | \\(\lvert x-a\rvert<R\\) 收敛，\\(\lvert x-a\rvert>R\\) 发散 |
+| \\(e^x = \sum_{n=0}^{\infty}\frac{x^n}{n!}\\) | 重要幂级数：\\(e^x\\) | \\(R=\infty\\) |
+| \\(\frac{1}{1-x} = \sum_{n=0}^{\infty} x^n\\) | 重要幂级数：\\(1/(1-x)\\) | \\(\lvert x\rvert<1\\) |
+| \\(\ln(1+x) = \sum_{n=1}^{\infty}\frac{(-1)^{n+1}x^n}{n}\\) | 重要幂级数：\\(\ln(1+x)\\) | \\(\lvert x\rvert<1\\) |
+| \\(\arctan x = \sum_{n=0}^{\infty}\frac{(-1)^n x^{2n+1}}{2n+1}\\) | 重要幂级数：\\(\arctan x\\) | \\(\lvert x\rvert\le 1\\) |
+| \\(\frac{\pi}{4} = 1-\frac{1}{3}+\frac{1}{5}-\frac{1}{7}+\cdots\\) | 莱布尼茨公式 | \\(\arctan x\\) 级数取 \\(x=1\\)；收敛极慢 |
+| \\(\frac{1}{\pi} = \frac{2\sqrt{2}}{9801}\sum_{k=0}^{\infty}\frac{(4k)!(1103+26390k)}{(k!)^4\cdot 396^{4k}}\\) | 拉马努金 1/π 公式一 | 每项约 8 位精度；第一项即对 7 位小数 |
+| \\(\frac{1}{\pi} = 12\sum_{k=0}^{\infty}\frac{(-1)^k(6k)!(13591409+545140134k)}{(3k)!(k!)^3\cdot 640320^{3k+3/2}}\\) | 拉马努金 1/π 公式二 | 每项约 14 位；Chudnovsky 算法的基础 |
+| \\(\sum_{n=0}^{\infty} p(n)x^n = \prod_{k=1}^{\infty}\frac{1}{1-x^k}\\) | 分拆生成函数 | \\(p(n)\\) 为分拆数 |
+| \\(p(5n+4)\equiv 0\pmod 5\\)，\\(p(7n+5)\equiv 0\pmod 7\\)，\\(p(11n+6)\equiv 0\pmod{11}\\) | 分拆同余式 | 拉马努金发现 |
+| \\(\sum_{n=0}^{\infty}\frac{q^{n^2}}{(q;q)_n} = \prod_{n=1}^{\infty}\frac{1}{(1-q^{5n-1})(1-q^{5n-4})}\\) | Rogers-Ramanujan 恒等式 | \\((q;q)_n=(1-q)(1-q^2)\cdots(1-q^n)\\) |
+| \\(f(x) = \frac{a_0}{2}+\sum_{n=1}^{\infty}\left[a_n\cos(nx)+b_n\sin(nx)\right]\\) | 傅里叶级数 | 周期函数分解为正弦/余弦波叠加 |
+| \\(a_n = \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\cos(nx)\,dx\\)，\\(b_n = \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\sin(nx)\,dx\\) | 傅里叶系数 | |
+| \\(f(x) = \frac{4}{\pi}\left(\sin x+\frac{\sin 3x}{3}+\frac{\sin 5x}{5}+\cdots\right)\\) | 方波的傅里叶级数 | 方波 \\(f(x)=\pm 1\\)；取 \\(x=\pi/2\\) 得莱布尼茨公式 |
+| \\(f(q) = \sum_{n=0}^{\infty}\frac{q^{n^2}}{(-q;q)_n^2}\\) | Mock theta 函数（拉马努金角） | Lost Notebook，1919；Zwegers 2002 严格化 |
+| \\(\sum_{n=1}^{\infty}\frac{1}{n(n+1)} = 1\\) | 望远镜级数（题 23.5） | 裂项 \\(\frac{1}{n}-\frac{1}{n+1}\\) 求和 |
+| \\(\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n} = \ln 2\\) | 交错调和级数（题 23.6） | 条件收敛；重排可得任意实数（黎曼重排定理） |
