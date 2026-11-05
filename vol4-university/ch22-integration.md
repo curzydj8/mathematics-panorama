@@ -239,3 +239,25 @@ print(f"{val:.10f} vs {math.e - 1:.10f}")  # 1.7182818285 vs 1.7182818285 ✓
 | 分部积分 | \\(\int u\,dv = uv - \int v\,du\\) | 乘积法则的逆 |
 
 **下一章**：级数——拉马努金的游乐场。从收敛判别到 \\(1/\pi\\) 公式。
+
+## 📋 本章公式全表
+
+本章全部核心公式汇总如下；详细推导见正文各节。
+
+| 公式 | 名称 | 适用条件 / 说明 |
+|---|---|---|
+| \\(\int_a^b f(x)\,dx = \lim_{n\to\infty}\sum_{i=1}^{n} f(\xi_i)\,\Delta x_i\\) | 定积分定义（黎曼和） | \\(\Delta x_i\to 0\\)；几何意义：曲边梯形面积 |
+| \\(\int_a^b f(x)\,dx = F(b)-F(a)\\) | 牛顿-莱布尼茨公式 | \\(F'(x)=f(x)\\)；微积分基本定理 |
+| \\(\int x^n\,dx = \frac{x^{n+1}}{n+1}+C\\) | 不定积分：幂函数 | \\(n\neq -1\\) |
+| \\(\int\frac{1}{x}\,dx = \ln\lvert x\rvert+C\\) | 不定积分：\\(1/x\\) | \\(x<0\\) 时为 \\(\ln(-x)+C\\) |
+| \\(\int e^x\,dx = e^x+C\\) | 不定积分：指数函数 | |
+| \\(\int\sin x\,dx = -\cos x+C\\)；\\(\int\cos x\,dx = \sin x+C\\) | 不定积分：三角函数 | |
+| \\(\int\frac{dx}{1+x^2} = \arctan x+C\\)；\\(\int\frac{dx}{\sqrt{1-x^2}} = \arcsin x+C\\) | 不定积分：反三角函数 | |
+| \\(\int f(g(x))\cdot g'(x)\,dx = \int f(u)\,du\\) | 第一类换元（凑微分） | \\(u=g(x)\\)；定积分换元须换上下限 |
+| \\(\sqrt{a^2-x^2}\to x=a\sin t\\)；\\(\sqrt{a^2+x^2}\to x=a\tan t\\)；\\(\sqrt{x^2-a^2}\to x=a\sec t\\) | 第二类换元（三角代换） | |
+| \\(\int u\,dv = uv-\int v\,du\\) | 分部积分 | 口诀"反对幂指三"；源自乘积求导法则 |
+| \\(\int_0^{\infty}\frac{\sin x}{x}\,dx = \frac{\pi}{2}\\) | 狄利克雷积分（拉马努金角） | |
+| \\(\int_0^{\infty}\frac{dx}{1+x^n} = \frac{\pi/n}{\sin(\pi/n)}\\) | 拉马努金积分 | \\(n>1\\)；\\(n=2\\) 时得 \\(\pi/2\\)，\\(n=4\\) 时得 \\(\frac{\pi}{2\sqrt{2}}\\) |
+| \\(\int_a^b f\approx\frac{h}{3}\left[f(a)+f(b)+4\sum f(x_{\text{奇}})+2\sum f(x_{\text{偶}})\right]\\) | 辛普森数值积分 | \\(h=\frac{b-a}{n}\\)，\\(n\\) 为偶数；22.4 代码实现 |
+| \\(\int x^2\ln x\,dx = \frac{x^3}{9}(3\ln x-1)+C\\) | 分部积分例题（题 22.2） | |
+| \\(\int_0^{\pi/2}\sin^n x\,dx = \int_0^{\pi/2}\cos^n x\,dx\\) | 正余弦幂积分对称（题 22.4） | 令 \\(u=\frac{\pi}{2}-x\\) 证得 |
