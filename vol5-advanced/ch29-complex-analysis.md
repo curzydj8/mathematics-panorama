@@ -241,3 +241,27 @@ print(f"留数定理: {mpmath.pi/(2*mpmath.sqrt(2)):.10f}")
 
 **下一章预告**：微分方程——从"已知变化率求原函数"到存在唯一性定理。
 牛顿用它描述宇宙，我们用它理解拉马努金的 mock theta。
+
+---
+
+## 📋 本章公式全表
+
+本章全部核心公式汇总如下；详细推导见正文各节。
+
+| 公式 | 名称 | 适用条件 / 说明 |
+|---|---|---|
+| \\(f'(z_0) = \\lim_{h \\to 0} \\frac{f(z_0 + h) - f(z_0)}{h}\\) | 复可导的定义 | \\(h\\) 从复平面任意方向趋于 0 |
+| \\(\\frac{\\partial u}{\\partial x} = \\frac{\\partial v}{\\partial y}\\)，\\(\\frac{\\partial u}{\\partial y} = -\\frac{\\partial v}{\\partial x}\\) | 柯西-黎曼方程 | \\(f = u + iv\\) 全纯的充要条件（区域上） |
+| \\(f\\) 在 \\(D\\) 全纯 \\(\\Rightarrow f\\) 在 \\(D\\) 内解析、无穷次可导 | 全纯 ⟹ 解析（奇迹定理） | 实分析中可导一次 ≠ 可导两次 |
+| \\(\\oint_\\gamma f(z)\\,dz = 0\\) | 柯西积分定理 | \\(f\\) 在单连通区域 \\(D\\) 全纯，\\(\\gamma\\) 为 \\(D\\) 内闭曲线 |
+| \\(f(a) = \\frac{1}{2\\pi i} \\oint_{\\lvert z-a \\rvert=r} \\frac{f(z)}{z - a}\\,dz\\) | 柯西积分公式 | 圆周上的值决定圆心的值；局部决定整体 |
+| \\(f^{(n)}(a) = \\frac{n!}{2\\pi i} \\oint \\frac{f(z)}{(z-a)^{n+1}}\\,dz\\) | 高阶导数公式 | 直接推出无穷次可导 |
+| \\(\\operatorname{Res}(f, z_0) = \\frac{1}{2\\pi i} \\oint_{\\lvert z-z_0 \\rvert=\\varepsilon} f(z)\\,dz\\) | 留数 | 等于洛朗展开中 \\((z - z_0)^{-1}\\) 项的系数 |
+| \\(\\oint_\\gamma f(z)\\,dz = 2\\pi i \\sum_{\\text{内部奇点}} \\operatorname{Res}(f, z_k)\\) | 留数定理 | 积分 = \\(2\\pi i\\) × 留数和 |
+| \\(\\int_{-\\infty}^{\\infty} \\frac{dx}{1+x^2} = \\pi\\) | 留数定理应用 | 上半平面单极点 \\(z = i\\)，留数 \\(\\frac{1}{2i}\\) |
+| \\(\\int_0^{\\infty} \\frac{dx}{1+x^4} = \\frac{\\pi}{2\\sqrt{2}}\\) | 留数定理应用 | 上半平面极点 \\(e^{i\\pi/4}, e^{i3\\pi/4}\\) |
+| \\(\\frac{1}{\\pi} = \\frac{2\\sqrt{2}}{9801} \\sum_{n=0}^{\\infty} \\frac{(4n)!(1103 + 26390n)}{(n!)^4 \\cdot 396^{4n}}\\) | 拉马努金 1/π 公式 | 每项约增 8 位精度；Borwein 兄弟 1987 年证明 |
+| \\(\\sum_{n=-\\infty}^{\\infty} \\frac{1}{(n+z)^2} = \\frac{\\pi^2}{\\sin^2(\\pi z)}\\) | 拉马努金式恒等式 | 两边极点与留数相同，刘维尔定理定常数 |
+| 有界整函数必为常数 | 刘维尔定理（题 29.3） | 估计 \\(\\lvert f'(a) \\rvert \\le \\frac{M}{R}\\)，令 \\(R \\to \\infty\\) |
+| \\(\\lvert f(z) \\rvert \\le C\\lvert z \\rvert^n \\Rightarrow f\\) 至多 \\(n\\) 次多项式 | 刘维尔定理的推广（题 29.5） | 高阶柯西公式估计 \\(f^{(n+1)} \\equiv 0\\) |
+| \\(\\int_0^{2\\pi} \\frac{d\\theta}{2 + \\cos\\theta} = \\frac{2\\pi}{\\sqrt{3}}\\) | 留数计算三角积分（题 29.2） | 令 \\(z = e^{i\\theta}\\)；\\(\\lvert z \\rvert = 1\\) 内唯一极点 \\(-2 + \\sqrt{3}\\) |
