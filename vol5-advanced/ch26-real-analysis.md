@@ -226,7 +226,7 @@ for n in [10, 50, 100, 500, 1000]:
 每项连续 + 一致收敛 \\(\\Rightarrow\\) 和函数连续。∎
 
 ### 题 26.5 解答
-**构造**：\\(f_n\\) 是底为 \\(\\frac{2}{n}\\)、高为 \\(n\\) 的"尖峰"，
+**构造**：\\(f_n\\) 是底为 \\(\\frac{2}{n^2}\\)、高为 \\(n\\) 的"尖峰"，
 中心在 \\(x = \\frac{1}{n}\\)：
 \\[ f_n(x) = \\begin{cases} n - n^3\\left|x - \\frac{1}{n}\\right|, & \\left|x - \\frac{1}{n}\\right| < \\frac{1}{n^2} \\\\ 0, & \\text{其他} \\end{cases} \\]
 - 逐点：\\(\\forall x\\)，当 \\(n\\) 充分大时 \\(f_n(x) = 0\\)，故 \\(f_n \\to 0\\)。
@@ -252,3 +252,23 @@ for n in [10, 50, 100, 500, 1000]:
 
 **下一章预告**：抽象代数——把"运算"本身作为研究对象。
 从 \\(a+b=b+a\\) 到群、环、域，拉格朗日定理揭示有限群的深刻结构。
+
+---
+
+## 📋 本章公式全表
+
+本章全部核心公式汇总如下；详细推导见正文各节。
+
+| 公式 | 名称 | 适用条件 / 说明 |
+|---|---|---|
+| \\(\\sup A\\) 为 \\(A\\) 的最小上界；非空有上界的实数集必有上确界 | 确界原理（实数完备性） | \\(A \\subset \\mathbb{R}\\) 非空有上界；下确界同理 |
+| \\(\\forall \\varepsilon > 0, \\exists \\delta > 0, \\lvert x - x_0 \\rvert < \\delta \\Rightarrow \\lvert f(x) - f(x_0) \\rvert < \\varepsilon\\) | 逐点连续（\\(\\varepsilon\\)-\\(\\delta\\) 定义） | \\(\\delta\\) 可依赖 \\(x_0\\) 与 \\(\\varepsilon\\) |
+| \\(\\forall \\varepsilon > 0, \\exists \\delta > 0, \\forall x_1, x_2 \\in I, \\lvert x_1 - x_2 \\rvert < \\delta \\Rightarrow \\lvert f(x_1) - f(x_2) \\rvert < \\varepsilon\\) | 一致连续 | \\(\\delta\\) 只依赖 \\(\\varepsilon\\)，与 \\(x\\) 的位置无关 |
+| 闭区间 \\([a, b]\\) 上的连续函数必一致连续 | 康托尔定理 | 区间须闭；开区间上不成立，如 \\(f(x) = 1/x\\) 在 \\((0,1)\\) 上 |
+| \\(\\forall \\varepsilon > 0, \\exists N, \\forall n > N, \\forall x, \\lvert f_n(x) - f(x) \\rvert < \\varepsilon\\) | 一致收敛 | \\(N\\) 不依赖 \\(x\\)；收敛速度全区间统一 |
+| \\(f_n\\) 连续且 \\(f_n \\rightrightarrows f\\)，则 \\(f\\) 连续，且 \\(\\int \\lim f_n = \\lim \\int f_n\\) | 一致收敛保持连续性与可积性 | 逐点收敛不保持连续性，如 \\(f_n(x) = x^n\\) 在 \\([0,1]\\) 上 |
+| \\(\\lvert f_n(x) \\rvert \\le M_n\\) 且 \\(\\sum M_n\\) 收敛，则 \\(\\sum f_n\\) 一致收敛 | 魏尔斯特拉斯 M 判别法 | 实用判据；\\(M_n\\) 与 \\(x\\) 无关 |
+| \\(\\sum_{n=1}^{\\infty} \\frac{\\sin(nx)}{n^2}\\) 一致收敛（\\(M_n = \\frac{1}{n^2}\\)，\\(\\sum \\frac{1}{n^2} = \\frac{\\pi^2}{6}\\)） | M 判别法应用 | \\(\\lvert \\sin(nx) \\rvert \\le 1\\) |
+| \\(\\sqrt{2} = 1 + \\cfrac{1}{2 + \\cfrac{1}{2 + \\cfrac{1}{2 + \\cdots}}}\\)，渐近分数 \\(1, \\frac{3}{2}, \\frac{7}{5}, \\frac{17}{12}, \\ldots\\) | \\(\\sqrt{2}\\) 的连分数 | 渐近分数交替从上下两侧逼近 \\(\\sqrt{2}\\) |
+| \\(1 + 2x + 3x^2 + 4x^3 + \\cdots = \\frac{1}{(1-x)^2}\\) | 拉马努金式幂级数 | \\(\\lvert x \\rvert < 1\\)；需 M 判别法一类工具才严格 |
+| \\(\\sup \\{1 - \\frac{1}{n} : n \\in \\mathbb{N}\\} = 1\\) | 上确界例题（题 26.1） | 1 是上界且为最小上界 |
