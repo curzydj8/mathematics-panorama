@@ -273,3 +273,23 @@ truth_table()
 **下一章预告**：三角函数——从直角三角形到单位圆，从角度到弧度，
 我们将看到 \\(\sin^2\theta + \cos^2\theta = 1\\) 背后的几何之美，
 以及正弦定理如何统一三角形的所有信息。
+
+
+## 📋 本章公式全表
+
+本章全部核心公式汇总如下；详细推导见正文各节。
+
+| 公式 | 名称 | 适用条件 / 说明 |
+|---|---|---|
+| \\(\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R} \subset \mathbb{C}\\) | 常见数集包含关系 | 自然数 ⊂ 整数 ⊂ 有理数 ⊂ 实数 ⊂ 复数 |
+| \\([a, b] = \\{x \mid a \le x \le b\\}\\)，\\((a, b) = \\{x \mid a < x < b\\}\\) | 区间记号 | 闭区间 / 开区间；半开半闭 \\([a, b)\\)、\\((a, b]\\) |
+| \\(A \cup B = \\{x \mid x \in A \text{ 或 } x \in B\\}\\) | 并集 | "或"；韦恩图中两圆的合并部分 |
+| \\(A \cap B = \\{x \mid x \in A \text{ 且 } x \in B\\}\\) | 交集 | "且"；韦恩图中两圆的重叠部分 |
+| \\(\complement_U A = \\{x \in U \mid x \notin A\\}\\) | 补集 | 也记 \\(A^c\\)；依赖全集 \\(U\\) |
+| \\(\complement_U(A \cup B) = (\complement_U A) \cap (\complement_U B)\\) | 德摩根定律（一） | 补集穿过括号，并交互换 |
+| \\(\complement_U(A \cap B) = (\complement_U A) \cup (\complement_U B)\\) | 德摩根定律（二） | 同上 |
+| \\(\lvert A \cup B\rvert = \lvert A\rvert + \lvert B\rvert - \lvert A \cap B\rvert\\) | 容斥原理（两集合） | 减去重复计数的交集部分 |
+| \\(\lvert A \cup B \cup C\rvert = \lvert A\rvert+\lvert B\rvert+\lvert C\rvert - \lvert A\cap B\rvert-\lvert B\cap C\rvert-\lvert A\cap C\rvert + \lvert A\cap B\cap C\rvert\\) | 容斥原理（三集合） | 两两交集减去，三重交集加回 |
+| \\((p \Rightarrow q) \Leftrightarrow (\neg q \Rightarrow \neg p)\\) | 逆否命题等价 | 原命题与逆否命题同真同假；反证法的理论基础 |
+| \\(p \Leftrightarrow q\\) | 充要条件 | \\(p \Rightarrow q\\) 且 \\(q \Rightarrow p\\) 时成立 |
+| \\(\sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}\\) | 巴塞尔问题（拉马努金角） | 欧拉 1734 年证明；拉马努金曾给出自己的断言 |
